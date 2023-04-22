@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">vagainclusiva</string>
+    <string name="access_token">pk.eyJ1IjoiZ3J1cG8xa2FyaSIsImEiOiJjbGczNXF0OHYwMXpvM2pudjd5MG5veDNwIn0.6VP-RBPmmplGkJ15pEmqXg</string>
+    <string name="cadastre_se">Cadastre-se</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="login">Login</string>
+
+
+</resources>
