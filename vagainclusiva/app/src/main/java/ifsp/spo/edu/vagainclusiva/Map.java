@@ -112,10 +112,17 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
         }
     }
 
+    @SuppressWarnings("MissingPermission")
     // Fazendo Mapbox Rodar em todos os estado possiveis
     @Override
     protected void onStart() {
         super.onStart();
+        if(locationEngine != null){
+            locationEngine.requestLocationUpdates();
+        }
+        if(locationLayerPlugin != null){
+            locationLayerPlugin.onStart();
+        }
         mapView.onStart();
     }
 
@@ -134,6 +141,12 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
     @Override
     protected void onStop() {
         super.onStop();
+        if(locationEngine != null){
+            locationEngine.removeLocationUpdates();
+        }
+        if (locationLayerPlugin != null){
+            locationLayerPlugin.onStop();
+        }
         mapView.onStop();
     }
 
@@ -152,6 +165,9 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        if(locationEngine != null){
+            locationEngine.deactivate();
+        }
         mapView.onDestroy();
     }
 
