@@ -59,7 +59,7 @@ public class Register extends AppCompatActivity {
                 UserRegister reg = new UserRegister(u.getText().toString(), p1.getText().toString(), p2.getText().toString(), email.getText().toString());
 
                 RequestQueue volleyQueue = Volley.newRequestQueue(Register.this);
-                String url = "http://10.0.2.2:8000/auth/registration/";
+                String url = "http://18.205.155.235:8000/auth/registration/";
 
                 Gson gson = new Gson();
                 String jsonString = gson.toJson(reg);

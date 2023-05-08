@@ -47,7 +47,7 @@ public class Login extends AppCompatActivity {
                 User user = new User(u.getText().toString(), p.getText().toString());
 
                 RequestQueue volleyQueue = Volley.newRequestQueue(Login.this);
-                String url = "http://10.0.2.2:8000/auth/login/";
+                String url = "http://18.205.155.235:8000/auth/login/";
 
                 Gson gson = new Gson();
                 String jsonString = gson.toJson(user);

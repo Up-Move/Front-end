@@ -45,4 +45,8 @@ dependencies {
     // Volley
     implementation 'com.android.volley:volley:1.2.1'
 
+    //Android Geolocation Service
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+
+
 }
