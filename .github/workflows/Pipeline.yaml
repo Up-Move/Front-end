@@ -10,17 +10,15 @@ jobs:
     - name: Checkout project sources
       uses: actions/checkout@v2
         
-    - name: Grant execute permission for gradlew
-      run: chmod +x ./gradlew
-        
     - name: Setup Gradle
       uses: gradle/gradle-build-action@v2
       
     - name: Run build with Gradle Wrapper
-      run: ./gradlew build
-      
-    - name: Run tests with Gradle Wrapper
-      run: ./gradlew test
+      run: 
+        cd vagainclusiva
+        ./gradlew test
       
     - name: Run connectedAndroidTest
-      run: ./gradlew connectedAndroidTest
+      run: 
+        cd vagainclusiva
+        ./gradlew connectedAndroidTest
