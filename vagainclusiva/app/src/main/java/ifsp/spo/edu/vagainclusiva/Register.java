@@ -1,9 +1,13 @@
 package ifsp.spo.edu.vagainclusiva;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -33,6 +37,8 @@ public class Register extends AppCompatActivity {
 
     private Button btnRegister;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +46,7 @@ public class Register extends AppCompatActivity {
         getSupportActionBar().hide();
 
         btnRegister = findViewById(R.id.btnRegister);
+
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override

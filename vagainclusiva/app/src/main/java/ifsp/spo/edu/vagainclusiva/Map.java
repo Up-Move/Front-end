@@ -2,8 +2,12 @@ package ifsp.spo.edu.vagainclusiva;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.app.Activity;
+import android.content.pm.PackageManager;
 import android.location.Location;
+import android.os.Build;
 import android.os.Bundle;
 
 import com.mapbox.android.core.location.LocationEngine;
@@ -12,7 +16,10 @@ import com.mapbox.android.core.location.LocationEnginePriority;
 import com.mapbox.android.core.location.LocationEngineProvider;
 import com.mapbox.android.core.permissions.PermissionsListener;
 import com.mapbox.android.core.permissions.PermissionsManager;
+import com.mapbox.geojson.Point;
 import com.mapbox.mapboxsdk.Mapbox;
+import com.mapbox.mapboxsdk.annotations.Marker;
+import com.mapbox.mapboxsdk.annotations.MarkerOptions;
 import com.mapbox.mapboxsdk.camera.CameraUpdate;
 import com.mapbox.mapboxsdk.camera.CameraUpdateFactory;
 import com.mapbox.mapboxsdk.geometry.LatLng;
@@ -28,7 +35,7 @@ import com.mapbox.mapboxsdk.plugins.locationlayer.modes.RenderMode;
 import java.util.List;
 
 
-public class Map extends AppCompatActivity implements OnMapReadyCallback, LocationEngineListener, PermissionsListener {
+public class Map extends AppCompatActivity implements OnMapReadyCallback, LocationEngineListener, PermissionsListener, MapboxMap.OnMapClickListener {
 
     private MapView mapView;
     private MapboxMap map;
@@ -37,6 +44,11 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
     private LocationLayerPlugin locationLayerPlugin;
     private Location originLocation;
 
+    private Point originPosition;
+
+    private Point destinationPosition;
+
+    private Marker destinationMarker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +67,7 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
     @Override
     public void onMapReady(MapboxMap mapboxMap) {
         map = mapboxMap;
+        map.addOnMapClickListener(this);
         enableLocation();
     }
 
@@ -165,13 +178,11 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if(locationEngine != null){
+        if (locationEngine != null) {
             locationEngine.deactivate();
         }
         mapView.onDestroy();
     }
-
-
 
     @Override
     public void onExplanationNeeded(List<String> permissionsToExplain) {
@@ -191,6 +202,13 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
         if (granted) enableLocation();
 
     }
-
-
+    @Override
+    public void onMapClick(@NonNull LatLng point) {
+        if(destinationMarker != null){
+            map.removeMarker(destinationMarker);
+        }
+        destinationMarker = map.addMarker(new MarkerOptions().position(point));
+        destinationPosition = Point.fromLngLat(point.getLongitude(),point.getLatitude());
+        originPosition = Point.fromLngLat(originLocation.getLongitude(), originLocation.getLatitude());
+    }
 }

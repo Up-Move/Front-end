@@ -1,8 +1,12 @@
 package ifsp.spo.edu.vagainclusiva;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -25,6 +29,26 @@ public class Login extends AppCompatActivity {
 
     private Button btnLogin;
 
+    public void requestReadPhoneStatePermission(Activity activity)
+    {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R)
+        {
+            if (ActivityCompat.checkSelfPermission(
+                    activity,
+                    android.Manifest.permission.READ_PHONE_STATE
+            ) != PackageManager.PERMISSION_GRANTED)
+            {
+                ActivityCompat.requestPermissions(
+                        activity,
+                        new String[]{
+                                android.Manifest.permission.READ_PHONE_STATE
+                        },
+                        0x1
+                );
+            }
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +56,8 @@ public class Login extends AppCompatActivity {
         getSupportActionBar().hide();
 
         btnLogin = findViewById(R.id.btnLogin);
+
+        this.requestReadPhoneStatePermission(this);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
