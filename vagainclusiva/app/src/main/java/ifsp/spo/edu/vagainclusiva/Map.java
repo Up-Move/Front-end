@@ -9,7 +9,15 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
 import com.mapbox.android.core.location.LocationEngine;
 import com.mapbox.android.core.location.LocationEngineListener;
 import com.mapbox.android.core.location.LocationEnginePriority;
@@ -32,6 +40,10 @@ import com.mapbox.mapboxsdk.plugins.locationlayer.LocationLayerPlugin;
 import com.mapbox.mapboxsdk.plugins.locationlayer.modes.CameraMode;
 import com.mapbox.mapboxsdk.plugins.locationlayer.modes.RenderMode;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.List;
 
 
@@ -48,6 +60,8 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
 
     private Point destinationPosition;
 
+    private Point vagaPosition;
+
     private Marker destinationMarker;
 
     @Override
@@ -62,6 +76,72 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
         mapView.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         mapView.getMapAsync(this);
+    }
+
+    private void getVagas(Location location) {
+
+        Log.e("VAGAS", "getting vagas...");
+
+        Double latitude = location.getLatitude();
+        Double longitude = location.getLongitude();
+
+        Log.e("VAGAS", "LAT" + latitude.toString());
+        Log.e("VAGAS", "LON" + longitude.toString());
+
+        String url = "http://18.205.155.235:8000/vagas/?latitude=" + latitude.toString() + "&longitude=" + longitude.toString();
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+
+        // Crie a requisição GET
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
+                Request.Method.GET,
+                url,
+                null,
+                new Response.Listener<JSONArray>() {
+                    @Override
+                    public void onResponse(JSONArray response) {
+                        Log.e("VOLLEY", response.toString());
+
+                        try {
+
+                            map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(),
+                                    location.getLongitude()), 15.5));
+                           // JSONArray jsonArray = new JSONArray(response); // 'response' é a resposta JSON recebida
+
+                            for (int i = 0; i < response.length(); i++) {
+                                JSONObject jsonObject = response.getJSONObject(i);
+
+                                double lat = jsonObject.getDouble("latitude");
+                                double lng = jsonObject.getDouble("longitude");
+
+                                LatLng vagaLatLng = new LatLng(lat, lng);
+
+                                map.addMarker(new MarkerOptions().position(vagaLatLng));
+
+
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("VOLLEY", error.toString());
+
+                        CharSequence text = "Erro";
+                        int duration = Toast.LENGTH_SHORT;
+
+                        Toast toast = Toast.makeText(Map.this, text, duration);
+                        toast.show();
+
+                    }
+                }) {
+                };
+
+        // Adicione a requisição à RequestQueue
+        requestQueue.add(jsonArrayRequest);
     }
 
     @Override
@@ -95,6 +175,7 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
         } else {
             locationEngine.addLocationEngineListener(this);
         }
+
     }
 
     @SuppressWarnings("MissingPermission")
@@ -107,7 +188,7 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
 
     private void setCameraPosition(Location location){
         map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(),
-                location.getLongitude()), 20.0));
+                location.getLongitude()), 15.5));
     }
     @SuppressWarnings("MissingPermission")
 
@@ -210,5 +291,8 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
         destinationMarker = map.addMarker(new MarkerOptions().position(point));
         destinationPosition = Point.fromLngLat(point.getLongitude(),point.getLatitude());
         originPosition = Point.fromLngLat(originLocation.getLongitude(), originLocation.getLatitude());
+
+        //volley request
+        getVagas(originLocation);
     }
 }
