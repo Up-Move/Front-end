@@ -2,6 +2,7 @@ package ifsp.spo.edu.vagainclusiva;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityCompat;
 
 import android.app.Activity;
@@ -46,6 +47,18 @@ import org.json.JSONObject;
 
 import java.util.List;
 
+import android.content.Intent;
+import android.content.res.Resources;
+import android.location.Location;
+import android.location.LocationRequest;
+import android.os.Bundle;
+import android.util.TypedValue;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
 
 public class Map extends AppCompatActivity implements OnMapReadyCallback, LocationEngineListener, PermissionsListener, MapboxMap.OnMapClickListener {
 
@@ -64,18 +77,132 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
 
     private Marker destinationMarker;
 
+    private boolean isExpanded = true;
+    private ImageView arrowButton, closeButton;
+    private View backgroundView, topView, viewLineOne, viewLineTwo, viewGraySquare, viewGreenSquare, viewYellowSquare, viewRedSquare;
+    private Button botaoCadastrar, botaoEntrar;
+    private TextView viewLoginCadastro, textNaoAvaliado, textBom, textRuim;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Teste
+
         // Adicionando Key
         Mapbox.getInstance(this, getString(R.string.access_token));
         // Rodando MapBox
         setContentView(R.layout.activity_map);
         mapView = (MapView) findViewById(R.id.mapView);
-        mapView.onCreate(savedInstanceState);
         getSupportActionBar().hide();
+        mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
+
+        arrowButton = findViewById(R.id.arrowDown);
+        backgroundView = findViewById(R.id.backgroundView);
+        botaoCadastrar = findViewById(R.id.botaocadastrar);
+        botaoEntrar = findViewById(R.id.botaoentrar);
+        viewLoginCadastro = findViewById(R.id.viewLoginCadastro);
+        backgroundView = findViewById(R.id.backgroundView);
+        closeButton = findViewById(R.id.closeButton);
+        textNaoAvaliado = findViewById(R.id.textNaoAvaliado);
+        textBom = findViewById(R.id.textBom);
+        textRuim = findViewById(R.id.textRuim);
+        topView = findViewById(R.id.topView);
+        viewLineOne = findViewById(R.id.viewLineOne);
+        viewLineTwo = findViewById(R.id.viewLineTwo);
+        viewGraySquare = findViewById(R.id.viewGraySquare);
+        viewGreenSquare = findViewById(R.id.viewGreenSquare);
+        viewYellowSquare = findViewById(R.id.viewYellowSquare);
+        viewRedSquare = findViewById(R.id.viewRedSquare);
+
+        // Trocar para Tela de Login
+        botaoEntrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Map.this, TelaLogin.class);
+                startActivity(intent);
+            }
+        });
+
+        // Trocar para Tela de Cadastro
+        botaoCadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Map.this, TelaCadastro.class);
+                startActivity(intent);
+            }
+        });
+
+        // Fechar a Janela das Cores
+        closeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textNaoAvaliado.setVisibility(View.GONE);
+                closeButton.setVisibility(View.GONE);
+                textBom.setVisibility(View.GONE);
+                textRuim.setVisibility(View.GONE);
+                topView.setVisibility(View.GONE);
+                viewLineOne.setVisibility(View.GONE);
+                viewLineTwo.setVisibility(View.GONE);
+                viewGraySquare.setVisibility(View.GONE);
+                viewYellowSquare.setVisibility(View.GONE);
+                viewGreenSquare.setVisibility(View.GONE);
+                viewRedSquare.setVisibility(View.GONE);
+            }
+        });
+
+        // Mover os Botões de Cadastro/Login para cima e para Baixo
+        arrowButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (isExpanded) {
+                    // Ocultar a view, os botões e mover a seta para baixo
+                    botaoCadastrar.setVisibility(View.GONE);
+                    botaoEntrar.setVisibility(View.GONE);
+                    arrowButton.setImageResource(R.drawable.arrow_up);
+
+                    // Seta
+                    ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) arrowButton.getLayoutParams();
+                    int arrowHeight = arrowButton.getHeight();
+                    int displacement_arrow = 390;
+                    params.bottomMargin = -arrowHeight - displacement_arrow; // Define a margem inferior negativa para posicionar o botão abaixo
+                    arrowButton.setLayoutParams(params);
+
+                    // Texto "Faça login ou cadastre-se"
+                    ConstraintLayout.LayoutParams textParams = (ConstraintLayout.LayoutParams) viewLoginCadastro.getLayoutParams();
+                    int displacement_text = 450;
+                    textParams.bottomMargin = -displacement_text;
+                    viewLoginCadastro.setLayoutParams(textParams);
+
+                    // Background View
+                    ConstraintLayout.LayoutParams backgroundParams = (ConstraintLayout.LayoutParams) backgroundView.getLayoutParams();
+                    int displacement_background = 340;
+                    backgroundParams.bottomMargin = -displacement_background;
+                    backgroundView.setLayoutParams(backgroundParams);
+                } else {
+                    // Mostrar a view, os botões e mover a seta para cima
+                    botaoCadastrar.setVisibility(View.VISIBLE);
+                    botaoEntrar.setVisibility(View.VISIBLE);
+                    arrowButton.setImageResource(R.drawable.arrow_down);
+
+                    // Seta
+                    ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) arrowButton.getLayoutParams();
+                    params.bottomMargin = 0; // Define a margem inferior padrão
+                    arrowButton.setLayoutParams(params);
+
+                    // Texto "Faça login ou cadastre-se"
+                    ConstraintLayout.LayoutParams textParams = (ConstraintLayout.LayoutParams) viewLoginCadastro.getLayoutParams();
+                    textParams.bottomMargin = 0; // Define a margem inferior padrão para a TextView
+                    viewLoginCadastro.setLayoutParams(textParams);
+
+                    // Background View
+                    ConstraintLayout.LayoutParams backgroundParams = (ConstraintLayout.LayoutParams) backgroundView.getLayoutParams();
+                    int displacement_background = 0;
+                    backgroundParams.bottomMargin = -displacement_background;
+                    backgroundView.setLayoutParams(backgroundParams);
+                }
+                isExpanded = !isExpanded;
+            }
+        });
     }
 
     private void getVagas(Location location) {

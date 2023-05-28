@@ -4,17 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register">
+    tools:context=".TelaLogin">
 
     <TextView
+        android:id="@+id/viewCadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jura"
         android:lineHeight="21dp"
-        android:textStyle="bold"
-        android:text="@string/cadastre_se"
+        android:text="Cadastro"
         android:textAppearance="@style/cadastre_se"
         android:textColor="@color/primary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.79"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.212" />
+
+    <TextView
+        android:id="@+id/viewLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jura"
+        android:lineHeight="21dp"
+        android:text="Login"
+        android:textAppearance="@style/cadastre_se"
+        android:textColor="@color/primary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.212" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jura"
+        android:lineHeight="21dp"
+        android:text="@string/login"
+        android:textAppearance="@style/login"
+        android:textColor="@color/primary"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -22,8 +57,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.096" />
 
+    <Button
+        android:id="@+id/botaologin"
+        android:layout_width="287dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="76dp"
+        android:backgroundTint="@color/primary"
+        android:fontFamily="@font/jura"
+        android:text="Login"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.521" />
+
     <EditText
-        android:id="@+id/inputEmail"
+        android:id="@+id/emaillogin"
         android:layout_width="308dp"
         android:layout_height="48dp"
         android:drawableLeft="@drawable/email"
@@ -39,83 +90,27 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.196" />
+        app:layout_constraintVertical_bias="0.351" />
 
     <EditText
-        android:id="@+id/inputName"
-        android:layout_width="308dp"
-        android:layout_height="48dp"
-        android:drawableLeft="@drawable/account_outline"
-        android:ems="5"
-        android:fontFamily="@font/jura"
-        android:hint=" Nome"
-        android:lineHeight="21dp"
-        android:textAppearance="@style/input"
-        android:textColor="@color/primary"
-        android:textColorHint="@color/primary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.303" />
-
-    <EditText
-        android:id="@+id/inputConfirmPassword"
+        android:id="@+id/senhalogin"
         android:layout_width="308dp"
         android:layout_height="48dp"
         android:drawableLeft="@drawable/lock"
-        android:drawableRight="@drawable/eye"
-        android:ems="5"
-        android:fontFamily="@font/jura"
-        android:hint=" Confirmar Senha"
-        android:lineHeight="21dp"
-        android:textAppearance="@style/input"
-        android:textColor="@color/primary"
-        android:textColorHint="@color/primary"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.515" />
-
-    <EditText
-        android:id="@+id/inputPassword"
-        android:layout_width="308dp"
-        android:layout_height="48dp"
-        android:drawableLeft="@drawable/lock"
-        android:drawableRight="@drawable/eye"
+        android:drawableRight="@drawable/eyeclosed"
         android:ems="5"
         android:fontFamily="@font/jura"
         android:hint=" Senha"
+        android:inputType="textPassword"
         android:lineHeight="21dp"
         android:textAppearance="@style/input"
         android:textColor="@color/primary"
         android:textColorHint="@color/primary"
-        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.408" />
-
-    <Button
-        android:id="@+id/btnRegister"
-        android:layout_width="287dp"
-        android:layout_height="61dp"
-        android:backgroundTint="@color/primary"
-        android:fontFamily="@font/jura"
-        android:text="Cadastrar"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputConfirmPassword" />
-
+        app:layout_constraintVertical_bias="0.458" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

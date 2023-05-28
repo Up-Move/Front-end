@@ -23,30 +23,34 @@
         android:theme="@style/Theme.Vagainclusiva"
         tools:targetApi="31">
 
-
-        <activity
-            android:name=".SplashScreen"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".Register"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:name=".Login"
-            android:exported="true">
-
-        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
         </activity>
+
+            <activity
+                android:name=".TelaLogo"
+                android:exported="true">
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+            </activity>
+            <activity
+                android:name=".TelaLogin"
+                android:exported="true" />
+            <activity
+                android:name=".TelaCadastro"
+                android:exported="true" />
+            <activity
+                android:name=".TelaGeolocalizacao"
+                android:exported="true">
+            </activity>
+            <activity
+                android:name=".TelaConexaoInternet"
+                android:exported="true">
+            </activity>
 
         <activity
             android:name=".Map"

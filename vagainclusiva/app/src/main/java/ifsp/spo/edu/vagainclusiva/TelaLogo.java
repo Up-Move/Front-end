@@ -1,33 +1,27 @@
 package ifsp.spo.edu.vagainclusiva;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-
-import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 
-public class SplashScreen extends AppCompatActivity {
+public class TelaLogo extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
+        setContentView(R.layout.activity_tela_logo);
         getSupportActionBar().hide();
 
+        int tempoDeExibicao = 2000;
 
         new Handler().postDelayed(new Runnable() {
-
             @Override
             public void run() {
-
-                startActivity(new Intent(getApplicationContext(),Login.class));
+                Intent proximaTela = new Intent(TelaLogo.this, TelaConexaoInternet.class);
+                startActivity(proximaTela);
+                finish();
             }
-
-        }, 4000);
+        }, tempoDeExibicao);
     }
-
 }
