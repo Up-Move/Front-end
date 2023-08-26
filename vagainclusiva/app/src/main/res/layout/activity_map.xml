@@ -11,9 +11,9 @@
         android:id="@+id/mapView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        mapbox:mapbox_cameraTargetLat = "37.7749"
-        mapbox:mapbox_cameraTargetLng = "-122.4194"
-        mapbox:mapbox_styleUrl = "mapbox://styles/mapbox/streets-v10"
+        mapbox:mapbox_cameraTargetLat = "-23.523449"
+        mapbox:mapbox_cameraTargetLng = "-46.631615"
+        mapbox:mapbox_styleUrl = "mapbox://styles/mapbox/streets-v12?optimize=true"
         mapbox:mapbox_cameraZoom = "15.5"
         />
 

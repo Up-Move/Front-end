@@ -46,6 +46,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.List;
+import java.util.concurrent.Semaphore;
 
 import android.content.Intent;
 import android.content.res.Resources;
@@ -58,7 +59,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.widget.TextView;
 
 public class Map extends AppCompatActivity implements OnMapReadyCallback, LocationEngineListener, PermissionsListener, MapboxMap.OnMapClickListener {
 
@@ -95,6 +98,7 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
         getSupportActionBar().hide();
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
+
 
         arrowButton = findViewById(R.id.arrowDown);
         backgroundView = findViewById(R.id.backgroundView);
@@ -205,70 +209,85 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
         });
     }
 
-    private void getVagas(Location location) {
 
-        Log.e("VAGAS", "getting vagas...");
+    // AsyncTask
+    private class GetVagasAsyncTask extends AsyncTask<Location, Void, JSONArray> {
 
-        Double latitude = location.getLatitude();
-        Double longitude = location.getLongitude();
+        @Override
+        protected JSONArray doInBackground(Location... locations) {
+            Location location = locations[0];
 
-        Log.e("VAGAS", "LAT" + latitude.toString());
-        Log.e("VAGAS", "LON" + longitude.toString());
+            Double latitude = location.getLatitude();
+            Double longitude = location.getLongitude();
 
-        String url = "http://18.205.155.235:8000/vagas/?latitude=" + latitude.toString() + "&longitude=" + longitude.toString();
+            String url = "http://18.205.155.235:8000/vagas/?latitude=" + latitude + "&longitude=" + longitude;
 
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
+            RequestQueue requestQueue = Volley.newRequestQueue(Map.this);
 
-        // Crie a requisição GET
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
-                Request.Method.GET,
-                url,
-                null,
-                new Response.Listener<JSONArray>() {
-                    @Override
-                    public void onResponse(JSONArray response) {
-                        Log.e("VOLLEY", response.toString());
+            final Semaphore semaphore = new Semaphore(0);
 
-                        try {
+            final JSONArray[] jsonArray = {null};
 
-                            map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(),
-                                    location.getLongitude()), 15.5));
-                           // JSONArray jsonArray = new JSONArray(response); // 'response' é a resposta JSON recebida
-
-                            for (int i = 0; i < response.length(); i++) {
-                                JSONObject jsonObject = response.getJSONObject(i);
-
-                                double lat = jsonObject.getDouble("latitude");
-                                double lng = jsonObject.getDouble("longitude");
-
-                                LatLng vagaLatLng = new LatLng(lat, lng);
-
-                                map.addMarker(new MarkerOptions().position(vagaLatLng));
-
-
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
+            // Create the GET request
+            JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
+                    Request.Method.GET,
+                    url,
+                    null,
+                    new Response.Listener<JSONArray>() {
+                        @Override
+                        public void onResponse(JSONArray response) {
+                            jsonArray[0] = response;
+                            semaphore.release();
                         }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            semaphore.release();
+                        }
+                    });
 
+            // Add the request to the RequestQueue
+            requestQueue.add(jsonArrayRequest);
+
+            try {
+                semaphore.acquire();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            return jsonArray[0];
+        }
+
+        @Override
+        protected void onPostExecute(JSONArray response) {
+            super.onPostExecute(response);
+            Log.e("VOLLEY", response.toString());
+
+            if (response != null) {
+                try {
+
+                    for (int i = 0; i < response.length(); i++) {
+                        JSONObject jsonObject = response.getJSONObject(i);
+
+                        double lat = jsonObject.getDouble("latitude");
+                        double lng = jsonObject.getDouble("longitude");
+
+                        LatLng vagaLatLng = new LatLng(lat, lng);
+
+                        map.addMarker(new MarkerOptions().position(vagaLatLng));
                     }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Log.e("VOLLEY", error.toString());
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                CharSequence text = "Erro";
+                int duration = Toast.LENGTH_SHORT;
 
-                        CharSequence text = "Erro";
-                        int duration = Toast.LENGTH_SHORT;
-
-                        Toast toast = Toast.makeText(Map.this, text, duration);
-                        toast.show();
-
-                    }
-                }) {
-                };
-
-        // Adicione a requisição à RequestQueue
-        requestQueue.add(jsonArrayRequest);
+                Toast toast = Toast.makeText(Map.this, text, duration);
+                toast.show();
+            }
+        }
     }
 
     @Override
@@ -292,7 +311,7 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
     @SuppressWarnings("MissingPermission")
     private void initializeLocationEngine(){
         locationEngine = new LocationEngineProvider(this).obtainBestLocationEngineAvailable();
-        locationEngine.setPriority(LocationEnginePriority.HIGH_ACCURACY);
+        locationEngine.setPriority(LocationEnginePriority.LOW_POWER);
         locationEngine.activate();
 
         Location lastLocation = locationEngine.getLastLocation();
@@ -301,6 +320,7 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
             setCameraPosition(lastLocation);
         } else {
             locationEngine.addLocationEngineListener(this);
+
         }
 
     }
@@ -329,7 +349,9 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
         //Requisição das vagas pra API por aqui
         if(location != null){
             originLocation = location;
-            setCameraPosition(location);
+           // setCameraPosition(location);
+            GetVagasAsyncTask asyncTask = new GetVagasAsyncTask();
+            asyncTask.execute(originLocation);
         }
     }
 
@@ -420,6 +442,7 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
         originPosition = Point.fromLngLat(originLocation.getLongitude(), originLocation.getLatitude());
 
         //volley request
-        getVagas(originLocation);
+        GetVagasAsyncTask asyncTask = new GetVagasAsyncTask();
+        asyncTask.execute(originLocation);
     }
 }
