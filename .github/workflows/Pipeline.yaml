@@ -25,5 +25,5 @@ jobs:
       
     #- name: Run connectedAndroidTest
     #  run: |
-    #    cd vagainclusiva
+    #    cd VagaInclusivaFrontEnd
     #    ./gradlew connectedAndroidTest
