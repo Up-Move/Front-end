@@ -15,7 +15,7 @@ jobs:
       
     - name: Make Gradlew executable
       run: |
-        cd vagainclusiva
+        cd VagaInclusivaFrontEnd
         chmod +x ./gradlew
       
     - name: Run build with Gradle Wrapper
