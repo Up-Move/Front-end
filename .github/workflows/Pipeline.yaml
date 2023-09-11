@@ -20,7 +20,7 @@ jobs:
       
     - name: Run build with Gradle Wrapper
       run: |
-        cd vagainclusiva
+        cd VagaInclusivaFrontEnd
         ./gradlew test
       
     #- name: Run connectedAndroidTest
