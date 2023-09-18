@@ -4,7 +4,7 @@
 ## Novas Features Adicionadas:
 - Validações na Tela de Login
 - Validações de E-Mail e Usuario ja Cadastrados no Banco
-- Cadastro com Usuario com Espaços
+- Validações ao Cadastrar um Username com Espaços
 - Implementar Login com Email em vez de Username
 
 ## Features Atuais:
