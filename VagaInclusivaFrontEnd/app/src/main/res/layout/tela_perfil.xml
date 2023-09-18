@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".userInterface.telaPerfil.TelaPerfil">
+
+    <!-- Superior -->
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/imageBackground"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/circular_white_background">
+
+            <ImageView
+                android:id="@+id/userImagem"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_person_black" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@id/imageBackground"
+            android:layout_centerVertical="true"
+            android:text="Nome do Usuário"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/grayBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#F8F8FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topLayout" />
+
+    <!-- Meio/Botões -->
+
+    <LinearLayout
+        android:id="@+id/meioBotoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/topLayout">
+
+        <Button
+            android:id="@+id/btn_dados"
+            android:layout_width="380dp"
+            android:layout_height="61dp"
+            android:backgroundTint="@color/primary"
+            android:fontFamily="@font/jura"
+            android:text="Meus Dados"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="start|center_vertical"
+            android:drawableLeft="@drawable/icon_person_black"
+            android:drawableRight="@drawable/icon_arrow_right" />
+
+        <!--
+        <Button
+            android:id="@+id/btn_trocarusername"
+            android:layout_width="380dp"
+            android:layout_height="61dp"
+            android:backgroundTint="@color/primary"
+            android:fontFamily="@font/jura"
+            android:text="Trocar Username"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="start|center_vertical"
+            android:drawableLeft="@drawable/icon_person_black"
+            android:drawableRight="@drawable/icon_arrow_right"/>
+            -->
+
+        <Button
+            android:id="@+id/btn_trocaremail"
+            android:layout_width="380dp"
+            android:layout_height="61dp"
+            android:backgroundTint="@color/primary"
+            android:fontFamily="@font/jura"
+            android:text="Trocar Email"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="start|center_vertical"
+            android:drawableLeft="@drawable/icon_email_black"
+            android:drawableRight="@drawable/icon_arrow_right"/>
+
+        <Button
+            android:id="@+id/btn_trocarsenha"
+            android:layout_width="380dp"
+            android:layout_height="61dp"
+            android:backgroundTint="@color/primary"
+            android:fontFamily="@font/jura"
+            android:text="Trocar Senha"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="start|center_vertical"
+            android:drawableLeft="@drawable/icon_lock_black"
+            android:drawableRight="@drawable/icon_arrow_right"/>
+
+        <Button
+            android:id="@+id/btn_darklayout"
+            android:layout_width="380dp"
+            android:layout_height="61dp"
+            android:backgroundTint="@color/primary"
+            android:fontFamily="@font/jura"
+            android:text="Trocar Tema"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="start|center_vertical"
+            android:drawableLeft="@drawable/icon_change_theme"
+            android:drawableRight="@drawable/icon_arrow_right"/>
+
+        <Button
+            android:id="@+id/btn_portuguesingles"
+            android:layout_width="380dp"
+            android:layout_height="61dp"
+            android:backgroundTint="@color/primary"
+            android:fontFamily="@font/jura"
+            android:text="Trocar Idioma"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="start|center_vertical"
+            android:drawableLeft="@drawable/icon_change_language"
+            android:drawableRight="@drawable/icon_arrow_right"/>
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="380dp"
+            android:layout_height="61dp"
+            android:backgroundTint="@color/primary"
+            android:fontFamily="@font/jura"
+            android:text="Deletar Conta"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="start|center_vertical"
+            android:drawableLeft="@drawable/icon_delete"
+            android:drawableRight="@drawable/icon_arrow_right"/>
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="380dp"
+            android:layout_height="61dp"
+            android:backgroundTint="@color/primary"
+            android:fontFamily="@font/jura"
+            android:text="Logout"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="start|center_vertical"
+            android:drawableLeft="@drawable/icon_logout_black"
+            android:drawableRight="@drawable/icon_arrow_right"/>
+    </LinearLayout>
+
+    <!-- Rodapé -->
+
+    <LinearLayout
+        android:id="@+id/backgroundUser"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/design_default_color_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical|center_horizontal">
+
+            <ImageView
+                android:id="@+id/imagemInicioBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/icon_inicio_black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Início"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical|center_horizontal">
+
+            <ImageView
+                android:id="@+id/imagemPersonBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/icon_person_black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perfil"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical|center_horizontal">
+
+            <ImageView
+                android:id="@+id/imagemInfoBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/icon_info_black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Info"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical|center_horizontal">
+
+            <ImageView
+                android:id="@+id/imagemFiltroBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/icon_filter_black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filtros"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
