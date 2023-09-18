@@ -5,7 +5,7 @@
 - Validações na Tela de Login
 - Validações de E-Mail e Usuario ja Cadastrados no Banco
 - Validações ao Cadastrar um Username com Espaços
-- Implementar Login com Email em vez de Username
+- Implementação de Login com Email em vez de Username
 
 ## Features Atuais:
 - Controle de Sessão (Sem Ajustes)
