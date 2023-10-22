@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Adicionando Permissão de Localização, Mapbox -->
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"
+        tools:ignore="CoarseFineLocation" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Permissão Internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Teste -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VagaInclusivaFrontEnd"
+        tools:targetApi="31">
+        <activity
+            android:name=".userInterface.TelaTokenCadastro.TelaTokenCadastro"
+            android:exported="true" />
+        <activity
+            android:name=".userInterface.telaVagaIndividual.TelaVagaIndividual"
+            android:exported="true" />
+        <activity
+            android:name=".userInterface.telaToken.TelaToken"
+            android:exported="true" />
+        <activity
+            android:name=".userInterface.telaInfos.TelaInfos"
+            android:exported="true" />
+        <activity
+            android:name=".userInterface.telaEsqueciSenha.TelaEsqueciSenha"
+            android:exported="true" />
+        <activity
+            android:name=".userInterface.telaComentarioAvaliacao.TelaComentarioAvaliacao"
+            android:exported="true" />
+        <activity
+            android:name=".userInterface.telaAvaliacaoFormulario.TelaAvaliacaoFormulario"
+            android:exported="true" />
+        <activity
+            android:name=".userInterface.telaAlterarSenhaEmail.TelaAlterarSenhaEmail"
+            android:exported="true" />
+        <activity
+            android:name=".userInterface.telaAlterarDadosPerfil.TelaAlterarDadosPerfil"
+            android:exported="true" />
+        <activity
+            android:name=".userInterface.telaPerfil.TelaPerfil"
+            android:exported="true" />
+        <activity
+            android:name=".userInterface.telaMapaAutenticado.TelaMapaAutenticado"
+            android:exported="true" />
+        <activity
+            android:name=".userInterface.telaLogo.TelaLogo"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".userInterface.telaConexaoInternet.TelaConexaoInternet"
+            android:exported="true" />
+        <activity
+            android:name=".userInterface.telaGeolocalizacao.TelaGeolocalizacao"
+            android:exported="true" />
+        <activity
+            android:name=".userInterface.telaMapa.TelaMapa"
+            android:exported="true" />
+        <activity
+            android:name=".userInterface.telaLogin.TelaLogin"
+            android:exported="true" />
+        <activity
+            android:name=".userInterface.telaCadastro.TelaCadastro"
+            android:exported="true" />
+        <activity
+            android:name=".userInterface.main.MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>
