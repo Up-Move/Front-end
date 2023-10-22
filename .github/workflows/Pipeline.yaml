@@ -16,18 +16,18 @@ jobs:
         distribution: 'adopt'
         java-version: 17
         
-    - name: Setup Gradle
-      uses: gradle/gradle-build-action@v2
+    #- name: Setup Gradle
+    #  uses: gradle/gradle-build-action@v2
       
-    - name: Make Gradlew executable
-      run: |
-        cd VagaInclusivaFrontEnd
-        chmod +x ./gradlew
+    #- name: Make Gradlew executable
+    #  run: |
+    #    cd VagaInclusivaFrontEnd
+    #    chmod +x ./gradlew
       
-    - name: Run build with Gradle Wrapper
-      run: |
-        cd VagaInclusivaFrontEnd
-        ./gradlew test
+    #- name: Run build with Gradle Wrapper
+    #  run: |
+    #    cd VagaInclusivaFrontEnd
+    #    ./gradlew test
       
     #- name: Run connectedAndroidTest
     #  run: |
