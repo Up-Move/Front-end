@@ -1,11 +1,12 @@
 ## Front-end
-4º Versão do Projeto
+5º Versão do Projeto
 
 ## Novas Features Adicionadas:
-- Sistema de Recuperação de Senha por Email e Token
-- Sistema de Validação de Cadastro por Email e Token
+- Adicionada Todas as Telas do Projeto
 
 ## Features Atuais:
+- Sistema de Recuperação de Senha por Email e Token
+- Sistema de Validação de Cadastro por Email e Token
 - Adicionada novas Telas pro Projeto
 - Adicionado Navegação entre as Telas Novas do Projeto
 - Controle de Sessão (Sem Ajustes)
