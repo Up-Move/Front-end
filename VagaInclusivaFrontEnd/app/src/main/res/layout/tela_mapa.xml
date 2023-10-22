@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".userInterface.telaMapa.TelaMapa">
+
+    <!-- Configurações do Mapbox -->
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="-23.5249245"
+        mapbox:mapbox_cameraTargetLng="-46.6219217"
+        mapbox:mapbox_cameraZoom="15.5"
+        mapbox:mapbox_styleUrl="mapbox://styles/mapbox/streets-v12?optimize=true"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <View
+    android:id="@+id/backgroundView"
+    android:layout_width="wrap_content"
+    android:layout_height="175dp"
+    android:background="@android:color/white"
+    mapbox:layout_constraintBottom_toBottomOf="parent"
+    mapbox:layout_constraintEnd_toEndOf="parent"
+    mapbox:layout_constraintStart_toStartOf="parent"
+    mapbox:layout_constraintTop_toTopOf="@+id/viewLoginCadastro"
+    mapbox:layout_constraintVertical_bias="1.0"
+    tools:ignore="VisualLintBounds" />
+
+<View
+    android:id="@+id/topView"
+    android:layout_width="380dp"
+    android:layout_height="51dp"
+    android:background="#20808080"
+    mapbox:layout_constraintBottom_toBottomOf="parent"
+    mapbox:layout_constraintEnd_toEndOf="parent"
+    mapbox:layout_constraintHorizontal_bias="0.523"
+    mapbox:layout_constraintStart_toStartOf="parent"
+    mapbox:layout_constraintTop_toTopOf="parent"
+    mapbox:layout_constraintVertical_bias="0.045" />
+
+<View
+    android:id="@+id/viewLineOne"
+    android:layout_width="3dp"
+    android:layout_height="51dp"
+    android:background="#000000"
+    mapbox:layout_constraintBottom_toBottomOf="parent"
+    mapbox:layout_constraintEnd_toEndOf="parent"
+    mapbox:layout_constraintHorizontal_bias="0.357"
+    mapbox:layout_constraintStart_toStartOf="parent"
+    mapbox:layout_constraintTop_toTopOf="parent"
+    mapbox:layout_constraintVertical_bias="0.044" />
+
+<View
+    android:id="@+id/viewLineTwo"
+    android:layout_width="3dp"
+    android:layout_height="51dp"
+    android:background="#000000"
+    mapbox:layout_constraintBottom_toBottomOf="parent"
+    mapbox:layout_constraintEnd_toEndOf="parent"
+    mapbox:layout_constraintHorizontal_bias="0.796"
+    mapbox:layout_constraintStart_toStartOf="parent"
+    mapbox:layout_constraintTop_toTopOf="parent"
+    mapbox:layout_constraintVertical_bias="0.044" />
+
+<View
+    android:id="@+id/viewGraySquare"
+    android:layout_width="14dp"
+    android:layout_height="13dp"
+    android:background="#969696"
+    mapbox:layout_constraintBottom_toBottomOf="parent"
+    mapbox:layout_constraintEnd_toEndOf="parent"
+    mapbox:layout_constraintHorizontal_bias="0.075"
+    mapbox:layout_constraintStart_toStartOf="parent"
+    mapbox:layout_constraintTop_toTopOf="parent"
+    mapbox:layout_constraintVertical_bias="0.073" />
+
+<View
+    android:id="@+id/viewGreenSquare"
+    android:layout_width="14dp"
+    android:layout_height="13dp"
+    android:background="#00FF00"
+    mapbox:layout_constraintBottom_toBottomOf="parent"
+    mapbox:layout_constraintEnd_toEndOf="parent"
+    mapbox:layout_constraintHorizontal_bias="0.510"
+    mapbox:layout_constraintStart_toStartOf="parent"
+    mapbox:layout_constraintTop_toTopOf="parent"
+    mapbox:layout_constraintVertical_bias="0.073" />
+
+<View
+    android:id="@+id/viewYellowSquare"
+    android:layout_width="14dp"
+    android:layout_height="13dp"
+    android:background="#E3C800"
+    mapbox:layout_constraintBottom_toBottomOf="parent"
+    mapbox:layout_constraintEnd_toEndOf="parent"
+    mapbox:layout_constraintHorizontal_bias="0.569"
+    mapbox:layout_constraintStart_toStartOf="parent"
+    mapbox:layout_constraintTop_toTopOf="parent"
+    mapbox:layout_constraintVertical_bias="0.073" />
+
+<View
+    android:id="@+id/viewRedSquare"
+    android:layout_width="14dp"
+    android:layout_height="13dp"
+    android:background="#DF4759"
+    mapbox:layout_constraintBottom_toBottomOf="parent"
+    mapbox:layout_constraintEnd_toEndOf="parent"
+    mapbox:layout_constraintHorizontal_bias="0.622"
+    mapbox:layout_constraintStart_toStartOf="parent"
+    mapbox:layout_constraintTop_toTopOf="parent"
+    mapbox:layout_constraintVertical_bias="0.073" />
+
+<!-- Tirar Linha: android:layout_marginEnd para Centralizar Texto -->
+    <ImageView
+        android:id="@+id/arrowDown"
+        android:layout_width="43dp"
+        android:layout_height="27dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/icon_arrow_down"
+        mapbox:layout_constraintBottom_toBottomOf="parent"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintHorizontal_bias="0.967"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent"
+        mapbox:layout_constraintVertical_bias="0.774"
+        android:contentDescription="@string/iconArrowDownDescription"/>
+
+    <!-- Tirar Linha: android:layout_marginEnd para Centralizar Texto -->
+    <TextView
+        android:id="@+id/viewLoginCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:fontFamily="@font/jura"
+        android:lineHeight="21dp"
+        android:text="@string/loginOuCadastro"
+        android:textColor="@color/primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginEnd="60dp"
+        mapbox:layout_constraintBottom_toBottomOf="parent"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent"
+        mapbox:layout_constraintVertical_bias="0.774"
+        tools:ignore="TextContrastCheck,UnusedAttribute"
+        mapbox:drawableStartCompat="@drawable/icon_cadeirante" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaocadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:fontFamily="@font/jura"
+        android:background="@drawable/button_border_radius"
+        android:textColor="@color/white"
+        android:clickable="true"
+        android:text="cadastrar"
+        android:textFontWeight="900"
+        tools:text="cadastrar"
+        mapbox:layout_constraintBottom_toBottomOf="parent"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent"
+        mapbox:layout_constraintVertical_bias="0.973"
+        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaoentrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/jura"
+        android:background="@drawable/button_border_radius"
+        android:textColor="@color/white"
+        android:clickable="true"
+        android:text="Entrar"
+        android:textFontWeight="900"
+        tools:text="entrar"
+        mapbox:layout_constraintBottom_toBottomOf="parent"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent"
+        mapbox:layout_constraintVertical_bias="0.849"
+        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+    <TextView
+        android:id="@+id/textNaoAvaliado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/naoAvaliado"
+        android:textStyle="bold"
+        mapbox:layout_constraintBottom_toBottomOf="parent"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintHorizontal_bias="0.139"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent"
+        mapbox:layout_constraintVertical_bias="0.069" />
+
+    <TextView
+        android:id="@+id/textBom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bom"
+        android:textStyle="bold"
+        mapbox:layout_constraintBottom_toBottomOf="parent"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintHorizontal_bias="0.442"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent"
+        mapbox:layout_constraintVertical_bias="0.069" />
+
+    <TextView
+        android:id="@+id/textRuim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ruim"
+        android:textStyle="bold"
+        mapbox:layout_constraintBottom_toBottomOf="parent"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintHorizontal_bias="0.707"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent"
+        mapbox:layout_constraintVertical_bias="0.069" />
+
+    <ImageView
+        android:id="@+id/closeButton"
+        android:layout_width="36dp"
+        android:layout_height="30dp"
+        mapbox:layout_constraintBottom_toBottomOf="parent"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintHorizontal_bias="0.92"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent"
+        mapbox:layout_constraintVertical_bias="0.061"
+        mapbox:srcCompat="@drawable/icon_close"
+        android:contentDescription="@string/iconCloseDescription"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
