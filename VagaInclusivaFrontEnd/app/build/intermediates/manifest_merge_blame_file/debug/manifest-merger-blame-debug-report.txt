@@ -1,0 +1,232 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="ifsp.spo.edu.vagainclusivafrontend"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+8-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml
+10
+11    <!-- Adicionando Permissão de Localização, Mapbox -->
+12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+12-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:6:5-8:45
+12-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:7:9-63
+13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+13-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:9:5-81
+13-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:9:22-78
+14
+15    <!-- Permissão Internet -->
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:12:5-67
+16-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:12:22-64
+17    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+17-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:13:5-75
+17-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:13:22-72
+18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+18-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:14:5-79
+18-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:14:22-76
+19
+20    <!-- Teste -->
+21    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+21-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:17:5-80
+21-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:17:22-77
+22    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+22-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:18:5-81
+22-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:18:22-78
+23
+24    <uses-feature
+24-->[com.mapbox.mapboxsdk:mapbox-android-sdk:6.0.1] C:\Users\igork\.gradle\caches\transforms-3\3c92f51c847bc22492274a7b26cb6a3a\transformed\jetified-mapbox-android-sdk-6.0.1\AndroidManifest.xml:9:5-11:35
+25        android:glEsVersion="0x00020000"
+25-->[com.mapbox.mapboxsdk:mapbox-android-sdk:6.0.1] C:\Users\igork\.gradle\caches\transforms-3\3c92f51c847bc22492274a7b26cb6a3a\transformed\jetified-mapbox-android-sdk-6.0.1\AndroidManifest.xml:10:9-41
+26        android:required="true" />
+26-->[com.mapbox.mapboxsdk:mapbox-android-sdk:6.0.1] C:\Users\igork\.gradle\caches\transforms-3\3c92f51c847bc22492274a7b26cb6a3a\transformed\jetified-mapbox-android-sdk-6.0.1\AndroidManifest.xml:11:9-32
+27    <uses-feature
+27-->[com.mapbox.mapboxsdk:mapbox-android-sdk:6.0.1] C:\Users\igork\.gradle\caches\transforms-3\3c92f51c847bc22492274a7b26cb6a3a\transformed\jetified-mapbox-android-sdk-6.0.1\AndroidManifest.xml:12:5-14:36
+28        android:name="android.hardware.wifi"
+28-->[com.mapbox.mapboxsdk:mapbox-android-sdk:6.0.1] C:\Users\igork\.gradle\caches\transforms-3\3c92f51c847bc22492274a7b26cb6a3a\transformed\jetified-mapbox-android-sdk-6.0.1\AndroidManifest.xml:13:9-45
+29        android:required="false" />
+29-->[com.mapbox.mapboxsdk:mapbox-android-sdk:6.0.1] C:\Users\igork\.gradle\caches\transforms-3\3c92f51c847bc22492274a7b26cb6a3a\transformed\jetified-mapbox-android-sdk-6.0.1\AndroidManifest.xml:14:9-33
+30
+31    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+31-->[com.mapbox.mapboxsdk:mapbox-android-sdk:6.0.1] C:\Users\igork\.gradle\caches\transforms-3\3c92f51c847bc22492274a7b26cb6a3a\transformed\jetified-mapbox-android-sdk-6.0.1\AndroidManifest.xml:18:5-76
+31-->[com.mapbox.mapboxsdk:mapbox-android-sdk:6.0.1] C:\Users\igork\.gradle\caches\transforms-3\3c92f51c847bc22492274a7b26cb6a3a\transformed\jetified-mapbox-android-sdk-6.0.1\AndroidManifest.xml:18:22-73
+32
+33    <permission
+33-->[androidx.core:core:1.9.0] C:\Users\igork\.gradle\caches\transforms-3\2d36cdbeb90dfdfd402f076bef064238\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+34        android:name="ifsp.spo.edu.vagainclusivafrontend.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+34-->[androidx.core:core:1.9.0] C:\Users\igork\.gradle\caches\transforms-3\2d36cdbeb90dfdfd402f076bef064238\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+35        android:protectionLevel="signature" />
+35-->[androidx.core:core:1.9.0] C:\Users\igork\.gradle\caches\transforms-3\2d36cdbeb90dfdfd402f076bef064238\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+36
+37    <uses-permission android:name="ifsp.spo.edu.vagainclusivafrontend.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+37-->[androidx.core:core:1.9.0] C:\Users\igork\.gradle\caches\transforms-3\2d36cdbeb90dfdfd402f076bef064238\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+37-->[androidx.core:core:1.9.0] C:\Users\igork\.gradle\caches\transforms-3\2d36cdbeb90dfdfd402f076bef064238\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+38
+39    <application
+39-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:20:5-87:19
+40        android:allowBackup="true"
+40-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:21:9-35
+41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+41-->[androidx.core:core:1.9.0] C:\Users\igork\.gradle\caches\transforms-3\2d36cdbeb90dfdfd402f076bef064238\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+42        android:dataExtractionRules="@xml/data_extraction_rules"
+42-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:22:9-65
+43        android:debuggable="true"
+44        android:extractNativeLibs="false"
+45        android:fullBackupContent="@xml/backup_rules"
+45-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:23:9-54
+46        android:icon="@mipmap/ic_launcher"
+46-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:24:9-43
+47        android:label="@string/app_name"
+47-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:25:9-41
+48        android:roundIcon="@mipmap/ic_launcher_round"
+48-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:26:9-54
+49        android:supportsRtl="true"
+49-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:27:9-35
+50        android:testOnly="true"
+51        android:theme="@style/Theme.VagaInclusivaFrontEnd" >
+51-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:28:9-59
+52        <activity
+52-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:30:9-32:39
+53            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaVagaIndividual.TelaVagaIndividual"
+53-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:31:13-80
+54            android:exported="true" />
+54-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:32:13-36
+55        <activity
+55-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:33:9-35:39
+56            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaToken.TelaToken"
+56-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:34:13-62
+57            android:exported="true" />
+57-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:35:13-36
+58        <activity
+58-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:36:9-38:39
+59            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaInfos.TelaInfos"
+59-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:37:13-62
+60            android:exported="true" />
+60-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:38:13-36
+61        <activity
+61-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:39:9-41:39
+62            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaEsqueciSenha.TelaEsqueciSenha"
+62-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:40:13-76
+63            android:exported="true" />
+63-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:41:13-36
+64        <activity
+64-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:42:9-44:39
+65            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaComentarioAvaliacao.TelaComentarioAvaliacao"
+65-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:43:13-90
+66            android:exported="true" />
+66-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:44:13-36
+67        <activity
+67-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:45:9-47:39
+68            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaAvaliacaoFormulario.TelaAvaliacaoFormulario"
+68-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:46:13-90
+69            android:exported="true" />
+69-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:47:13-36
+70        <activity
+70-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:48:9-50:39
+71            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaAlterarSenhaEmail.TelaAlterarSenhaEmail"
+71-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:49:13-86
+72            android:exported="true" />
+72-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:50:13-36
+73        <activity
+73-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:51:9-53:39
+74            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaAlterarDadosPerfil.TelaAlterarDadosPerfil"
+74-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:52:13-88
+75            android:exported="true" />
+75-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:53:13-36
+76        <activity
+76-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:54:9-56:39
+77            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaPerfil.TelaPerfil"
+77-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:55:13-64
+78            android:exported="true" />
+78-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:56:13-36
+79        <activity
+79-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:57:9-59:39
+80            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaUsuario.TelaUsuario"
+80-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:58:13-66
+81            android:exported="true" />
+81-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:59:13-36
+82        <activity
+82-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:60:9-68:20
+83            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaLogo.TelaLogo"
+83-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:61:13-60
+84            android:exported="true" >
+84-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:62:13-36
+85            <intent-filter>
+85-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:63:13-67:29
+86                <action android:name="android.intent.action.MAIN" />
+86-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:64:17-69
+86-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:64:25-66
+87
+88                <category android:name="android.intent.category.LAUNCHER" />
+88-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:66:17-77
+88-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:66:27-74
+89            </intent-filter>
+90        </activity>
+91        <activity
+91-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:69:9-71:39
+92            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaConexaoInternet.TelaConexaoInternet"
+92-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:70:13-82
+93            android:exported="true" />
+93-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:71:13-36
+94        <activity
+94-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:72:9-74:39
+95            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaGeolocalizacao.TelaGeolocalizacao"
+95-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:73:13-80
+96            android:exported="true" />
+96-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:74:13-36
+97        <activity
+97-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:75:9-77:39
+98            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaMapa.TelaMapa"
+98-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:76:13-60
+99            android:exported="true" />
+99-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:77:13-36
+100        <activity
+100-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:78:9-80:39
+101            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaLogin.TelaLogin"
+101-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:79:13-62
+102            android:exported="true" />
+102-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:80:13-36
+103        <activity
+103-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:81:9-83:39
+104            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaCadastro.TelaCadastro"
+104-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:82:13-68
+105            android:exported="true" />
+105-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:83:13-36
+106        <activity
+106-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:84:9-86:39
+107            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.main.MainActivity"
+107-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:85:13-60
+108            android:exported="true" />
+108-->C:\Users\igork\OneDrive\Documentos\TCC\Front-end\VagaInclusivaFrontEnd\app\src\main\AndroidManifest.xml:86:13-36
+109
+110        <service android:name="com.mapbox.android.telemetry.TelemetryService" />
+110-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:3.0.2] C:\Users\igork\.gradle\caches\transforms-3\bfc94a136bb4bb3a3890f502793db847\transformed\jetified-mapbox-android-telemetry-3.0.2\AndroidManifest.xml:16:9-81
+110-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:3.0.2] C:\Users\igork\.gradle\caches\transforms-3\bfc94a136bb4bb3a3890f502793db847\transformed\jetified-mapbox-android-telemetry-3.0.2\AndroidManifest.xml:16:18-78
+111
+112        <provider
+112-->[androidx.emoji2:emoji2:1.2.0] C:\Users\igork\.gradle\caches\transforms-3\1861c8489e009d8a4e730227620cc122\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+113            android:name="androidx.startup.InitializationProvider"
+113-->[androidx.emoji2:emoji2:1.2.0] C:\Users\igork\.gradle\caches\transforms-3\1861c8489e009d8a4e730227620cc122\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+114            android:authorities="ifsp.spo.edu.vagainclusivafrontend.androidx-startup"
+114-->[androidx.emoji2:emoji2:1.2.0] C:\Users\igork\.gradle\caches\transforms-3\1861c8489e009d8a4e730227620cc122\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+115            android:exported="false" >
+115-->[androidx.emoji2:emoji2:1.2.0] C:\Users\igork\.gradle\caches\transforms-3\1861c8489e009d8a4e730227620cc122\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+116            <meta-data
+116-->[androidx.emoji2:emoji2:1.2.0] C:\Users\igork\.gradle\caches\transforms-3\1861c8489e009d8a4e730227620cc122\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+117                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+117-->[androidx.emoji2:emoji2:1.2.0] C:\Users\igork\.gradle\caches\transforms-3\1861c8489e009d8a4e730227620cc122\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+118                android:value="androidx.startup" />
+118-->[androidx.emoji2:emoji2:1.2.0] C:\Users\igork\.gradle\caches\transforms-3\1861c8489e009d8a4e730227620cc122\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+119            <meta-data
+119-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\igork\.gradle\caches\transforms-3\af1c2d516b5a921a26b5da097a1ba1a1\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+120                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+120-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\igork\.gradle\caches\transforms-3\af1c2d516b5a921a26b5da097a1ba1a1\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+121                android:value="androidx.startup" />
+121-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\igork\.gradle\caches\transforms-3\af1c2d516b5a921a26b5da097a1ba1a1\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+122        </provider>
+123    </application>
+124
+125</manifest>

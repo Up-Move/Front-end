@@ -1,0 +1,350 @@
+[
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_inicio_black.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_inicio_black.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/layout_tela_vaga_individual.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/layout/tela_vaga_individual.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_vaga_inclusiva.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_vaga_inclusiva.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_lock.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_lock.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_eye.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_eye.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_button_border_radius.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/button_border_radius.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_google.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_google.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/layout_tela_alterar_senha_email.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/layout/tela_alterar_senha_email.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_logo_vaga_inclusiva.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/logo_vaga_inclusiva.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_background_wheelchair_man_1.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/background_wheelchair_man_1.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_background_chairman.png.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/background_chairman.png"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_exclamation.png.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_exclamation.png"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_info_black.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_info_black.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_account_outline.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_account_outline.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_eye_close.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_eye_close.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/layout_tela_usuario.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/layout/tela_usuario.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_email_black.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_email_black.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_logout_black.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_logout_black.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_eye_open.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_eye_open.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_star.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_star.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/layout_tela_infos.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/layout/tela_infos.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_background_car_1.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/background_car_1.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/xml_data_extraction_rules.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_arrowdowncirclefill.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_arrowdowncirclefill.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_lock_black.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_lock_black.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_person_white.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_person_white.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/layout_tela_mapa.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/layout/tela_mapa.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_checkbox.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_checkbox.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_check2square.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_check2square.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_localization.png.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_localization.png"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_tokens.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_tokens.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_change_language.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_change_language.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_ic_launcher_background.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/xml_backup_rules.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_email_blue.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_email_blue.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_token_alterar_senha.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_token_alterar_senha.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/layout_tela_cadastro.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/layout/tela_cadastro.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/layout_tela_geolocalizacao.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/layout/tela_geolocalizacao.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_star_filled.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_star_filled.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_background_faq_primary_color_1.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/background_faq_primary_color_1.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_account_outline.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/account_outline.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_delete.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_delete.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/layout_tela_comentario_avaliacao.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/layout/tela_comentario_avaliacao.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_close.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_close.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_arrow_up.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_arrow_up.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/layout_tela_login.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/layout/tela_login.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_arrow_right.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_arrow_right.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_filter_black.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_filter_black.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_background_circular_white.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/background_circular_white.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_lock_blue.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_lock_blue.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/font_jura.ttf.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/font/jura.ttf"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/layout_tela_perfil.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/layout/tela_perfil.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_backgroud_inline_google_button.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/backgroud_inline_google_button.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_double_arrow_down.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_double_arrow_down.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_change_theme.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_change_theme.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_cadeirante.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_cadeirante.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/layout_tela_token.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/layout/tela_token.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/xml_network_security_config.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/xml/network_security_config.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/layout_tela_esqueci_senha.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/layout/tela_esqueci_senha.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/layout_main.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/layout/main.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_arrow_down.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_arrow_down.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_background_blob_scene_haikei.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/background_blob_scene_haikei.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_x.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_x.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/layout_tela_conexao_internet.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/layout/tela_conexao_internet.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_alterar_dados_senha.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_alterar_dados_senha.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/layout_tela_avaliacao_formulario.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/layout/tela_avaliacao_formulario.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_email_alterar_senha.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_email_alterar_senha.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_star_gold.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_star_gold.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_person_black.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_person_black.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/layout_tela_logo.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/layout/tela_logo.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_background_line_4.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/background_line_4.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_arrowupcirclefill.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_arrowupcirclefill.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/drawable_icon_star_filled_gold.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/drawable/icon_star_filled_gold.xml"
+    },
+    {
+        "merged": "ifsp.spo.edu.vagainclusivafrontend.app-merged_res-31:/layout_tela_alterar_dados_perfil.xml.flat",
+        "source": "ifsp.spo.edu.vagainclusivafrontend.app-main-33:/layout/tela_alterar_dados_perfil.xml"
+    }
+]

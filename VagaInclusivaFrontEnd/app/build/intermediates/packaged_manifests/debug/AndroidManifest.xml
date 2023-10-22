@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ifsp.spo.edu.vagainclusivafrontend"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="26"
+        android:targetSdkVersion="33" />
+
+    <!-- Adicionando Permissão de Localização, Mapbox -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Permissão Internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Teste -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <permission
+        android:name="ifsp.spo.edu.vagainclusivafrontend.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="ifsp.spo.edu.vagainclusivafrontend.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.VagaInclusivaFrontEnd" >
+        <activity
+            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaVagaIndividual.TelaVagaIndividual"
+            android:exported="true" />
+        <activity
+            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaToken.TelaToken"
+            android:exported="true" />
+        <activity
+            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaInfos.TelaInfos"
+            android:exported="true" />
+        <activity
+            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaEsqueciSenha.TelaEsqueciSenha"
+            android:exported="true" />
+        <activity
+            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaComentarioAvaliacao.TelaComentarioAvaliacao"
+            android:exported="true" />
+        <activity
+            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaAvaliacaoFormulario.TelaAvaliacaoFormulario"
+            android:exported="true" />
+        <activity
+            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaAlterarSenhaEmail.TelaAlterarSenhaEmail"
+            android:exported="true" />
+        <activity
+            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaAlterarDadosPerfil.TelaAlterarDadosPerfil"
+            android:exported="true" />
+        <activity
+            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaPerfil.TelaPerfil"
+            android:exported="true" />
+        <activity
+            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaUsuario.TelaUsuario"
+            android:exported="true" />
+        <activity
+            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaLogo.TelaLogo"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaConexaoInternet.TelaConexaoInternet"
+            android:exported="true" />
+        <activity
+            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaGeolocalizacao.TelaGeolocalizacao"
+            android:exported="true" />
+        <activity
+            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaMapa.TelaMapa"
+            android:exported="true" />
+        <activity
+            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaLogin.TelaLogin"
+            android:exported="true" />
+        <activity
+            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.telaCadastro.TelaCadastro"
+            android:exported="true" />
+        <activity
+            android:name="ifsp.spo.edu.vagainclusivafrontend.userInterface.main.MainActivity"
+            android:exported="true" />
+
+        <service android:name="com.mapbox.android.telemetry.TelemetryService" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="ifsp.spo.edu.vagainclusivafrontend.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
+    </application>
+
+</manifest>
