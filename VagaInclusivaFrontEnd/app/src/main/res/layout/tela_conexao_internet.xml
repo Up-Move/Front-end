@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/android_large_background"
+    tools:context=".userInterface.telaConexaoInternet.TelaConexaoInternet">
+
+
+    <View
+        android:id="@+id/sem_internet_container"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/button_border_radius_contexts"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck">
+    </View>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_tente_novamente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_border_radius_secondary"
+        android:clickable="true"
+        android:fontFamily="@font/jura"
+        android:text="Tentar Novamente"
+        android:textColor="@color/white"
+        android:textFontWeight="900"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sem_internet_container"
+        tools:text="Tentar Novamente" />
+
+    <ImageView
+        android:id="@+id/sem_internet_vetor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/sem_internet_container"
+        app:layout_constraintStart_toStartOf="@+id/sem_internet_container"
+        app:layout_constraintTop_toTopOf="@+id/sem_internet_container"
+        app:srcCompat="@drawable/alert_circle" />
+
+    <TextView
+        android:id="@+id/sem_internet_mensagem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Olá, visitante! Para acessar o aplicativo VagaInclusiva, é necessário que você esteja conectado à internet."
+        app:layout_constraintEnd_toEndOf="@+id/sem_internet_container"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:fontFamily="@font/jura"
+        android:textFontWeight="600"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/sem_internet_container"
+        app:layout_constraintTop_toBottomOf="@+id/sem_internet_vetor"
+        tools:text="Olá, visitante! Para acessar o aplicativo VagaInclusiva, é necessário que você esteja conectado à internet." />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
