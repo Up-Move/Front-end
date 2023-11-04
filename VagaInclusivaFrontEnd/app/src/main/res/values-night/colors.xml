@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark Theme -->
+    <color name="primary">#FFF07E13</color>
+    <color name="background">#FF09060A</color>
+    <color name="background2">#FF040504</color>
+    <color name="background3">#FF000000</color>
+    <color name="background4">#FF000000</color>
+    <color name="primary_type">#F07E13</color>
+    <color name="background_type">#FF000000</color>
+    <color name="primary_text">#FFFFFFFF</color>
+    <color name="primary_text2">#FFFFFFFF</color>
+
+</resources>

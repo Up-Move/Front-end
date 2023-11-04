@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config xmlns:tools="http://schemas.android.com/tools">
+    <base-config cleartextTrafficPermitted="true"
+        tools:ignore="InsecureBaseConfiguration" />
+    <!-- Configuração para Logar na AWS -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">23.23.1.10</domain>
+    </domain-config>
+</network-security-config>
