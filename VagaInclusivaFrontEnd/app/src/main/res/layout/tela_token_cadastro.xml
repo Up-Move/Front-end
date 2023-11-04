@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="top"
+    android:background="@drawable/background_blob_scene_haikei"
+    tools:context=".userInterface.telaTokenCadastro.TelaTokenCadastro">
+
+    <TextView
+        android:id="@+id/title_altera_senha_token"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:layout_marginHorizontal="56dp"
+        android:fontFamily="@font/jura"
+        android:gravity="center"
+        android:textFontWeight="700"
+        android:textSize="28dp"
+        android:text="Validação de Email"
+        android:textColor="@color/primary"
+        tools:text="Validação de Email"
+        tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+    <EditText
+        android:id="@+id/digite_token"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="66dp"
+        android:layout_marginTop="38dp"
+        android:drawableLeft="@drawable/icon_token_alterar_senha"
+        android:backgroundTint="@color/primary"
+        android:ems="10"
+        android:fontFamily="@font/jura"
+        android:hint="Digite o Token"
+        android:importantForAutofill="no"
+        android:minHeight="48dp"
+        android:paddingLeft="8dp"
+        android:textAppearance="@style/input"
+        android:textColor="@color/primary"
+        android:textColorHint="@color/primary"
+        android:textFontWeight="700"
+        android:textSize="18dp"
+        tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry,SpUsage,TextFields,UnusedAttribute" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaotoken"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/jura"
+        android:background="@drawable/button_border_radius"
+        android:textColor="@color/primary_text2"
+        android:clickable="true"
+        android:text="enviar token"
+        android:textFontWeight="900"
+        tools:text="enviar token"
+        tools:ignore="HardcodedText,UnusedAttribute" />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/token_accordion"
+        android:onClick="expand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="36dp"
+        android:layout_marginTop="34dp"
+        app:cardBackgroundColor="@color/background2"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
+        app:contentPadding="10dp"
+        tools:ignore="TouchTargetSizeCheck">
+
+        <LinearLayout
+            android:id="@+id/token_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/token_title"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jura"
+                android:drawableRight="@drawable/icon_arrowdowncirclefill"
+                android:text="Onde está o token?"
+                android:textColor="@color/black"
+                android:textFontWeight="700"
+                tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute,UseCompatTextViewDrawableXml" />
+
+            <TextView
+                android:id="@+id/token_descricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jura"
+                android:text="O token foi enviado para o seu e-mail para que possamos autenticar o seu cadastro, caso não encontre, confira a sua caixa de spam."
+                android:textColor="@color/black"
+                android:textFontWeight="300"
+                android:textSize="12dp"
+                android:visibility="gone"
+                tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
