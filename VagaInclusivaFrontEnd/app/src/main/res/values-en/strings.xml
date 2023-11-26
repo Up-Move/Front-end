@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="tela_mapa_nao_avaliado">Not Rated</string>
+    <string name="tela_mapa_bom">Good</string>
+    <string name="tela_mapa_ruim">Bad</string>
+    <string name="tela_mapa_faca_seu_login_ou_cadastrese">Login or register</string>
+    <string name="tela_mapa_entrar">Login</string>
+    <string name="tela_mapa_cadastrar">Register</string>
+
+    <string name="tela_geolocalizacao_permitir">Allow</string>
+    <string name="tela_geolocalizacao_mensagem">Hello, visitor! To access the VagaInclusiva app, it is necessary for you to be connected to the internet and allow the geolocation function on your Android device.</string>
+
+    <string name="tela_telefone_permitir">Allow</string>
+    <string name="tela_telefone_mensagem">Hello, visitor! To access the VagaInclusiva app, it is necessary for you to be connected to the internet and allow the access the phone state on your Android device.</string>
+
+    <string name="tela_conexao_internet_tentar_novamente">Try Again</string>
+    <string name="tela_conexao_internet_mensagem">Hello, visitor! To access the VagaInclusiva app, you need to be connected to the internet.</string>
+
+    <string name="tela_cadastro_cadastrar">REGISTER</string>
+    <string name="tela_cadastro_email_hint">Email</string>
+    <string name="tela_cadastro_senha_hint">Password</string>
+    <string name="tela_cadastro_google">Sign in with your Google account</string>
+    <string name="tela_cadastro_cadastrese">Sign up</string>
+    <string name="tela_cadastro_login">LOGIN</string>
+    <string name="tela_cadastro_usuario_hint">Username</string>
+    <string name="tela_cadastro_confirmar_senha_hint">Confirm password</string>
+    <string name="tela_cadastro_cadastrar_btn">Register</string>
+
+    <string name="tela_login_google">Sign in with your Google account</string>
+    <string name="tela_login_faca_login">Login</string>
+    <string name="tela_login_login">LOGIN</string>
+    <string name="tela_login_cadastrar">REGISTER</string>
+    <string name="tela_login_email_hint">Email</string>
+    <string name="tela_login_senha_hint">Password</string>
+    <string name="tela_login_entrar">LOGIN</string>
+    <string name="tela_login_esqueci_senha">Forgot My Password</string>
+
+    <string name="tela_perfil_altere_seu_perfil">Change your profile</string>
+    <string name="tela_perfil_nome_de_usuario">Username</string>
+    <string name="tela_perfil_email">Email</string>
+    <string name="tela_perfil_criacao_da_conta">Account creation</string>
+    <string name="tela_perfil_altere_dados_do_perfil">Edit profile information</string>
+    <string name="tela_perfil_tema">Theme</string>
+    <string name="tela_perfil_idioma">Language</string>
+    <string name="tela_perfil_excluir_conta">Do you want to delete your account?</string>
+    <string name="tela_perfil_fazer_logout">Logout</string>
+
+    <string name="tela_alterar_dados_perfil_alterar_dados_do_seu_perfil">Change your profile data</string>
+    <string name="tela_alterar_dados_perfil_hint_email_atual">Current email</string>
+    <string name="tela_alterar_dados_perfil_hint_novo_email">New email</string>
+    <string name="tela_alterar_dados_perfil_atualizar_email">Update email</string>
+    <string name="tela_alterar_dados_perfil_hint_senha_atual">Current password</string>
+    <string name="tela_alterar_dados_perfil_hint_nova_senha">New password</string>
+    <string name="tela_alterar_dados_perfil_atualizar_senha">Update password</string>
+
+    <string name="tela_alterar_senha_email_alteracao_de_senha">Password Change</string>
+    <string name="tela_alterar_senha_email_hint_email">Enter your email</string>
+    <string name="tela_alterar_senha_email_enviar_email">Send email</string>
+    <string name="tela_alterar_senha_email_titulo">Why is it necessary to send my email?</string>
+    <string name="tela_alterar_senha_email_mensagem">By sending the email you used to register an account, we can verify if it belongs to an existing account and then send the authentication token for password change.</string>
+
+    <string name="tela_avaliacao_formulario_dados_da_vaga">Parking Information</string>
+    <string name="tela_avaliacao_formulario_media">Average</string>
+    <string name="tela_avaliacao_formulario_acessibilidade">Accessibility</string>
+    <string name="tela_avaliacao_formulario_avalie_essa_vaga">Rate this Park</string>
+    <string name="tela_avaliacao_formulario_nota">Rating</string>
+    <string name="tela_avaliacao_formulario_tipos_acessibilidade">Types of Accessibility</string>
+    <string name="tela_avaliacao_formulario_calcadas_niveladas">Level Sidewalks</string>
+    <string name="tela_avaliacao_formulario_recuo_direito">Right Side Chair Clearance</string>
+    <string name="tela_avaliacao_formulario_recuo_esquerdo">Left Side Chair Clearance</string>
+    <string name="tela_avaliacao_formulario_recuo_cadeira_traseira">Rear Chair Clearance</string>
+    <string name="tela_avaliacao_formulario_trafego">Low-Intensity Local Traffic</string>
+    <string name="tela_avaliacao_formulario_calcadas_largas">Wide Sidewalks</string>
+    <string name="tela_avaliacao_formulario_guia_rebaixada">Lowered Curb</string>
+    <string name="tela_avaliacao_formulario_piso_tatil">Tactile Floor</string>
+    <string name="tela_avaliacao_formulario_outro">Other</string>
+    <string name="tela_avaliacao_formulario_hint_comentario">Write your comment in the review …</string>
+    <string name="tela_avaliacao_formulario_comentario">Comment</string>
+    <string name="tela_avaliacao_formulario_avaliacao">SEND REVIEW</string>
+
+    <string name="tela_comentario_avaliacao_comentario_da_vaga">Parking comments</string>
+    <string name="tela_comentario_avaliacao_avaliacao">See comments</string>
+    <string name="tela_comentario_avaliacao_responder">Reply</string>
+
+    <string name="tela_comentario_formulario_titulo">"Comment on the review of "</string>
+    <string name="tela_comentario_formulario_comentario">Comment</string>
+    <string name="tela_comentario_formulario_hint">Write your comment in the review …</string>
+    <string name="tela_comentario_formulario_enviar_comentario">Send comment</string>
+
+    <string name="tela_comentario_individual_titulo">Comments on the review of</string>
+    <string name="tela_comentario_individual_responder">Reply</string>
+    <string name="tela_comentario_individual_sem_avaliacao">Comment without review</string>
+
+    <string name="tela_esqueci_senha_titulo">Change your password</string>
+    <string name="tela_esqueci_senha_nova_senha">New password</string>
+    <string name="tela_esqueci_senha_confirmar_senha">Confirm password</string>
+    <string name="tela_esqueci_senha_senha_btn">Update password</string>
+
+    <string name="tela_filtro_filtro_salvo">Saved Filter</string>
+    <string name="tela_filtro_nao_filtros">No saved filters yet…</string>
+    <string name="tela_filtro_tipo_acessibilidade">Filter by accessibility type</string>
+    <string name="tela_filtro_calcadas_niveladas">Level Sidewalks</string>
+    <string name="tela_filtro_recuo_cadeira_lado_direito">Right Side Chair Clearance</string>
+    <string name="tela_filtro_recuo_cadeira_lado_esquerdo">Left Side Chair Clearance</string>
+    <string name="tela_filtro_recuo_cadeira_traseira">Rear Chair Clearance</string>
+    <string name="tela_filtro_trafego">Local Traffic with Lower Intensity</string>
+    <string name="tela_filtro_calcadas_largas">Wide Sidewalks</string>
+    <string name="tela_filtro_guia_rebaixada">Lowered Curb</string>
+    <string name="tela_filtro_piso_tatil">Tactile Floor</string>
+    <string name="tela_filtro_outro">Other</string>
+    <string name="tela_filtro_filtre_por_avaliacao">Filter by rating</string>
+    <string name="tela_filtro_nota">Rating</string>
+    <string name="tela_filtro_btn_filtrar">Filter</string>
+    <string name="tela_filtro_btn_salvar">Save</string>
+
+    <string name="tela_footer_inicio">Home</string>
+    <string name="tela_footer_perfil">Profile</string>
+    <string name="tela_footer_info">Info</string>
+    <string name="tela_footer_filtro">Filters</string>
+
+    <string name="tela_info_faq">FAQ</string>
+    <string name="tela_info_titulo1">Is the app paid?</string>
+    <string name="tela_info_resposta1">The app is distributed for free.</string>
+    <string name="tela_info_titulo2">Why is it necessary to create an account?</string>
+    <string name="tela_info_resposta2">To ensure the quality of the app and prevent any offensive content in reviews. This ensures control over what is posted and allows users to make suggestions.</string>
+    <string name="tela_info_titulo3">Can I delete my account?</string>
+    <string name="tela_info_resposta3">Yes, you can do so at any time.</string>
+    <string name="tela_info_titulo4">Do I need to be logged in to view job listings?</string>
+    <string name="tela_info_resposta4">No, you only need to be logged in to rate and view ratings.</string>
+    <string name="tela_info_titulo5">Can I change any personal information?</string>
+    <string name="tela_info_resposta5">Yes, you can edit your profile at any time.</string>
+    <string name="tela_info_titulo6">How do I use the app?</string>
+    <string name="tela_info_resposta6">You can view job listings and their quality indicators without being logged in. However, to view your own ratings and comments, or to rate jobs and save preferred filters, you need to register and log in.</string>
+
+    <string name="tela_token_titulo">Password Change</string>
+    <string name="tela_token_hint">Enter the Token</string>
+    <string name="tela_token_btn">Send Token</string>
+    <string name="tela_token_titulo1">Where is the token?</string>
+    <string name="tela_token_resposta1">The token has been sent to your registered email to authenticate the user and change the password of your account. If you can\'t find it, please check your spam folder.</string>
+
+    <string name="tela_token_cadastro_titulo">Email Validation</string>
+    <string name="tela_token_cadastro_hint">Enter the Token</string>
+    <string name="tela_token_cadastro_btn">Send Token</string>
+    <string name="tela_token_cadastro_titulo1">Where is the token?</string>
+    <string name="tela_token_cadastro_resposta1">The token has been sent to your registered email to authenticate the user and change the password of your account. If you can\'t find it, please check your spam folder.</string>
+
+    <string name="tela_vaga_individual_dados_da_vaga">Parking Information</string>
+    <string name="tela_vaga_individual_media">Average</string>
+    <string name="tela_vaga_individual_acessibilidade">Accessibility</string>
+    <string name="tela_vaga_individual_avaliar_essa_vaga">Rate this parking</string>
+    <string name="tela_vaga_individual_comentario_dessa_vaga">Comments on this parking</string>
+    <string name="tela_vaga_individual_avaliacao">See comments</string>
+    <string name="tela_vaga_individual_responder">Reply</string>
+    <string name="tela_vaga_individual_mais_comentarios">See more comments</string>
+
+
+    <string name="tela_avaliacao_container_local">Location: </string>
+    <string name="tela_avaliacao_container_proximidade">Proximity: </string>
+    <string name="tela_avaliacao_container_vagas">Number of Parking spaces: </string>
+    <string name="tela_avaliacao_container_area">Area: </string>
+    <string name="tela_avaliacao_container_coordenadas">Coordinates: </string>
+
+    <string name="tela_vaga_individual_sem_comentarios">This parking does not have any comments yet</string>
+
+</resources>
