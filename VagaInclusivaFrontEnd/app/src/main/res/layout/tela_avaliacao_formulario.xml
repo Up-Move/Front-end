@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".userInterface.telaAvaliacaoFormulario.TelaAvaliacaoFormulario">
+
+    <View
+        android:id="@+id/container_dados_da_vaga"
+        android:layout_height="214dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="7dp"
+        android:background="@color/background2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titulo_dados_da_vaga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="120dp"
+        android:fontFamily="@font/jura"
+        android:text="@string/tela_avaliacao_formulario_dados_da_vaga"
+        android:textColor="@color/primary"
+        android:textColorLink="@color/primary"
+        android:textFontWeight="700"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/container_dados_da_vaga"
+        app:layout_constraintStart_toStartOf="@+id/container_dados_da_vaga"
+        app:layout_constraintTop_toTopOf="@+id/container_dados_da_vaga" />
+
+    <View
+        android:id="@+id/container_dados"
+        android:layout_width="274dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="86dp"
+        android:background="@color/background"
+        app:layout_constraintEnd_toEndOf="@+id/container_dados_da_vaga"
+        app:layout_constraintStart_toStartOf="@+id/container_dados_da_vaga"
+        app:layout_constraintTop_toTopOf="@+id/container_dados_da_vaga" />
+
+    <TextView
+        android:id="@+id/container_local"
+        android:layout_width="260dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/background2"
+        android:textColor="@color/primary_text"
+        android:gravity="center_vertical"
+        android:text="@string/tela_avaliacao_container_local"
+        android:paddingLeft="10dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/container_dados"
+        app:layout_constraintStart_toStartOf="@+id/container_dados"
+        app:layout_constraintTop_toTopOf="@+id/container_dados" />
+
+    <TextView
+        android:id="@+id/container_proximidade"
+        android:layout_width="260dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/tela_avaliacao_container_proximidade"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:textColor="@color/primary_text"
+        android:background="@color/background2"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/container_dados"
+        app:layout_constraintStart_toStartOf="@+id/container_dados"
+        app:layout_constraintTop_toBottomOf="@+id/container_local" />
+
+    <TextView
+        android:id="@+id/container_numero_vagas"
+        android:layout_width="260dp"
+        android:layout_height="28dp"
+        android:background="@color/background2"
+        android:textColor="@color/primary_text"
+        android:text="@string/tela_avaliacao_container_vagas"
+        android:layout_marginTop="12dp"
+        android:textSize="12sp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/container_dados"
+        app:layout_constraintStart_toStartOf="@+id/container_dados"
+        app:layout_constraintTop_toBottomOf="@+id/container_proximidade" />
+
+    <TextView
+        android:id="@+id/container_area"
+        android:layout_width="100dp"
+        android:layout_height="28dp"
+        android:background="@color/background2"
+        android:textColor="@color/primary_text"
+        android:text="@string/tela_avaliacao_container_area"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="160dp"
+        android:textSize="10sp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/container_dados"
+        app:layout_constraintStart_toStartOf="@+id/container_dados"
+        app:layout_constraintTop_toBottomOf="@+id/container_numero_vagas" />
+
+    <TextView
+        android:id="@+id/container_coordenadas"
+        android:layout_width="152dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="106dp"
+        android:text="@string/tela_avaliacao_container_coordenadas"
+        android:textColor="@color/primary_text"
+        android:background="@color/background2"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/container_dados"
+        app:layout_constraintStart_toStartOf="@+id/container_dados"
+        app:layout_constraintTop_toBottomOf="@+id/container_numero_vagas" />
+
+    <TextView
+        android:id="@+id/titulo_media"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/jura"
+        android:text="@string/tela_vaga_individual_media"
+        android:textColor="@color/primary"
+        app:layout_constraintEnd_toEndOf="@+id/container_dados_da_vaga"
+        app:layout_constraintStart_toEndOf="@+id/container_dados"
+        app:layout_constraintTop_toTopOf="@+id/container_dados_da_vaga" />
+
+    <ImageView
+        android:id="@+id/estrela_1"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="64dp"
+        app:layout_constraintEnd_toEndOf="@+id/container_dados_da_vaga"
+        app:layout_constraintStart_toEndOf="@+id/container_dados"
+        app:layout_constraintTop_toTopOf="@+id/container_dados_da_vaga"
+        app:srcCompat="@drawable/icon_star_filled" />
+
+    <ImageView
+        android:id="@+id/estrela_2"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="31dp"
+        app:layout_constraintEnd_toEndOf="@+id/container_dados_da_vaga"
+        app:layout_constraintStart_toEndOf="@+id/container_dados"
+        app:layout_constraintTop_toTopOf="@+id/container_dados_da_vaga"
+        app:srcCompat="@drawable/icon_star_filled" />
+
+    <ImageView
+        android:id="@+id/estrela_3"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/container_dados_da_vaga"
+        app:layout_constraintStart_toEndOf="@+id/container_dados"
+        app:layout_constraintTop_toTopOf="@+id/container_dados_da_vaga"
+        app:srcCompat="@drawable/icon_star_filled" />
+
+    <ImageView
+        android:id="@+id/estrela_4"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="33dp"
+        app:layout_constraintEnd_toEndOf="@+id/container_dados_da_vaga"
+        app:layout_constraintStart_toEndOf="@+id/container_dados"
+        app:layout_constraintTop_toTopOf="@+id/container_dados_da_vaga"
+        app:srcCompat="@drawable/icon_star_filled" />
+
+    <ImageView
+        android:id="@+id/estrela_5"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="66dp"
+        app:layout_constraintEnd_toEndOf="@+id/container_dados_da_vaga"
+        app:layout_constraintStart_toEndOf="@+id/container_dados"
+        app:layout_constraintTop_toTopOf="@+id/container_dados_da_vaga"
+        app:srcCompat="@drawable/icon_star_filled" />
+
+    <TextView
+        android:id="@+id/titulo_acessibilidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/jura"
+        android:text="@string/tela_avaliacao_formulario_acessibilidade"
+        android:textColor="@color/primary"
+        android:textFontWeight="700"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/container_dados_da_vaga"
+        app:layout_constraintStart_toEndOf="@+id/container_dados"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_media" />
+
+    <LinearLayout
+        android:id="@+id/tela_avaliacao_formulario_container_acessibilidades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/container_dados_da_vaga"
+        app:layout_constraintStart_toEndOf="@+id/container_dados"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_acessibilidade">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/avalie_essa_vaga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jura"
+        android:text="@string/tela_avaliacao_formulario_avalie_essa_vaga"
+        android:textColor="@color/primary"
+        android:textFontWeight="700"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_dados_da_vaga" />
+
+    <View
+        android:id="@+id/container_avaliacao_nota"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="7dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/background2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avalie_essa_vaga" />
+
+    <TextView
+        android:id="@+id/title_nota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jura"
+        android:text="@string/tela_avaliacao_formulario_nota"
+        android:textColor="@color/primary"
+        android:textFontWeight="900"
+        app:layout_constraintEnd_toEndOf="@+id/container_avaliacao_nota"
+        app:layout_constraintStart_toStartOf="@+id/container_avaliacao_nota"
+        app:layout_constraintTop_toTopOf="@+id/container_avaliacao_nota" />
+
+    <ImageView
+        android:id="@+id/estrela_avaliacao1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="100dp"
+        app:layout_constraintEnd_toEndOf="@+id/container_avaliacao_nota"
+        app:layout_constraintStart_toStartOf="@+id/container_avaliacao_nota"
+        app:layout_constraintTop_toBottomOf="@+id/title_nota"
+        app:srcCompat="@drawable/icon_star" />
+
+    <ImageView
+        android:id="@+id/estrela_avaliacao2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/container_avaliacao_nota"
+        app:layout_constraintStart_toStartOf="@+id/container_avaliacao_nota"
+        app:layout_constraintTop_toBottomOf="@+id/title_nota"
+        app:srcCompat="@drawable/icon_star" />
+
+    <ImageView
+        android:id="@+id/estrela_avaliacao3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/container_avaliacao_nota"
+        app:layout_constraintStart_toStartOf="@+id/container_avaliacao_nota"
+        app:layout_constraintTop_toBottomOf="@+id/title_nota"
+        app:srcCompat="@drawable/icon_star" />
+
+    <ImageView
+        android:id="@+id/estrela_avaliacao4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/container_avaliacao_nota"
+        app:layout_constraintStart_toStartOf="@+id/container_avaliacao_nota"
+        app:layout_constraintTop_toBottomOf="@+id/title_nota"
+        app:srcCompat="@drawable/icon_star" />
+
+    <ImageView
+        android:id="@+id/estrela_avaliacao5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        app:layout_constraintEnd_toEndOf="@+id/container_avaliacao_nota"
+        app:layout_constraintStart_toStartOf="@+id/container_avaliacao_nota"
+        app:layout_constraintTop_toBottomOf="@+id/title_nota"
+        app:srcCompat="@drawable/icon_star" />
+
+    <View
+        android:id="@+id/container_tipos_de_acessibilidade"
+        android:layout_height="130dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="7dp"
+        android:background="@color/background2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_avaliacao_nota" />
+
+    <TextView
+        android:id="@+id/title_tipos_de_acessibilidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jura"
+        android:text="@string/tela_avaliacao_formulario_tipos_acessibilidade"
+        android:textColor="@color/primary"
+        android:textFontWeight="500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/container_tipos_de_acessibilidade" />
+
+    <ImageView
+        android:id="@+id/checkbox_acessibilidade1"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/container_tipos_de_acessibilidade"
+        app:layout_constraintTop_toTopOf="@+id/container_tipos_de_acessibilidade"
+        app:srcCompat="@drawable/icon_check2square" />
+
+    <TextView
+        android:id="@+id/calcadas_niveladas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="4dp"
+        android:fontFamily="@font/jura"
+        android:text="@string/tela_avaliacao_formulario_calcadas_niveladas"
+        android:textColor="@color/primary_text"
+        android:textFontWeight="500"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_acessibilidade1"
+        app:layout_constraintTop_toTopOf="@+id/container_tipos_de_acessibilidade" />
+
+
+    <ImageView
+        android:id="@+id/checkbox_acessibilidade2"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="42dp"
+        app:layout_constraintStart_toStartOf="@+id/container_tipos_de_acessibilidade"
+        app:layout_constraintTop_toTopOf="@+id/container_tipos_de_acessibilidade"
+        app:srcCompat="@drawable/icon_check2square" />
+
+    <TextView
+        android:id="@+id/recuo_para_cadeira_lado_direito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/jura"
+        android:layout_marginLeft="6dp"
+        android:text="@string/tela_avaliacao_formulario_recuo_direito"
+        android:textColor="@color/primary_text"
+        android:textFontWeight="500"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_acessibilidade2"
+        app:layout_constraintTop_toTopOf="@+id/container_tipos_de_acessibilidade" />
+
+    <ImageView
+        android:id="@+id/checkbox_acessibilidade3"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginLeft="6dp"
+        app:layout_constraintStart_toStartOf="@+id/container_tipos_de_acessibilidade"
+        app:layout_constraintTop_toTopOf="@+id/container_tipos_de_acessibilidade"
+        app:srcCompat="@drawable/icon_check2square" />
+
+    <TextView
+        android:id="@+id/recuo_para_cadeira_lado_esquerdo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/jura"
+        android:layout_marginLeft="6dp"
+        android:text="@string/tela_avaliacao_formulario_recuo_esquerdo"
+        android:textColor="@color/primary_text"
+        android:textFontWeight="500"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_acessibilidade3"
+        app:layout_constraintTop_toTopOf="@+id/container_tipos_de_acessibilidade" />
+
+    <ImageView
+        android:id="@+id/checkbox_acessibilidade4"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginLeft="6dp"
+        app:layout_constraintStart_toStartOf="@+id/container_tipos_de_acessibilidade"
+        app:layout_constraintTop_toTopOf="@+id/container_tipos_de_acessibilidade"
+        app:srcCompat="@drawable/icon_check2square" />
+
+    <TextView
+        android:id="@+id/recuo_para_cadeira_traseira"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="82dp"
+        android:fontFamily="@font/jura"
+        android:layout_marginLeft="6dp"
+        android:text="@string/tela_avaliacao_formulario_recuo_cadeira_traseira"
+        android:textColor="@color/primary_text"
+        android:textFontWeight="500"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_acessibilidade4"
+        app:layout_constraintTop_toTopOf="@+id/container_tipos_de_acessibilidade" />
+
+    <ImageView
+        android:id="@+id/checkbox_acessibilidade5"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginLeft="6dp"
+        app:layout_constraintStart_toStartOf="@+id/container_tipos_de_acessibilidade"
+        app:layout_constraintTop_toTopOf="@+id/container_tipos_de_acessibilidade"
+        app:srcCompat="@drawable/icon_check2square" />
+
+    <TextView
+        android:id="@+id/trafego_local"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:fontFamily="@font/jura"
+        android:layout_marginLeft="6dp"
+        android:text="@string/tela_avaliacao_formulario_trafego"
+        android:textColor="@color/primary_text"
+        android:textFontWeight="500"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_acessibilidade5"
+        app:layout_constraintTop_toTopOf="@+id/container_tipos_de_acessibilidade" />
+
+    <ImageView
+        android:id="@+id/checkbox_acessibilidade6"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="122dp"
+        app:layout_constraintEnd_toEndOf="@+id/container_tipos_de_acessibilidade"
+        app:layout_constraintTop_toTopOf="@+id/container_tipos_de_acessibilidade"
+        app:srcCompat="@drawable/icon_check2square" />
+
+    <TextView
+        android:id="@+id/calcadas_largas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="6dp"
+        android:fontFamily="@font/jura"
+        android:text="@string/tela_avaliacao_formulario_calcadas_largas"
+        android:textColor="@color/primary_text"
+        android:textFontWeight="500"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_acessibilidade6"
+        app:layout_constraintTop_toTopOf="@+id/container_tipos_de_acessibilidade" />
+
+    <ImageView
+        android:id="@+id/checkbox_acessibilidade7"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginRight="122dp"
+        app:layout_constraintEnd_toEndOf="@+id/container_tipos_de_acessibilidade"
+        app:layout_constraintTop_toTopOf="@+id/container_tipos_de_acessibilidade"
+        app:srcCompat="@drawable/icon_check2square" />
+
+    <TextView
+        android:id="@+id/guia_rebaixada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_marginLeft="6dp"
+        android:fontFamily="@font/jura"
+        android:text="@string/tela_avaliacao_formulario_guia_rebaixada"
+        android:textColor="@color/primary_text"
+        android:textFontWeight="500"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_acessibilidade7"
+        app:layout_constraintTop_toTopOf="@+id/container_tipos_de_acessibilidade" />
+
+    <ImageView
+        android:id="@+id/checkbox_acessibilidade8"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginRight="122dp"
+        app:layout_constraintEnd_toEndOf="@+id/container_tipos_de_acessibilidade"
+        app:layout_constraintTop_toTopOf="@+id/container_tipos_de_acessibilidade"
+        app:srcCompat="@drawable/icon_check2square" />
+
+    <TextView
+        android:id="@+id/piso_tatil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="6dp"
+        android:fontFamily="@font/jura"
+        android:text="@string/tela_avaliacao_formulario_piso_tatil"
+        android:textColor="@color/primary_text"
+        android:textFontWeight="500"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_acessibilidade8"
+        app:layout_constraintTop_toTopOf="@+id/container_tipos_de_acessibilidade" />
+
+    <ImageView
+        android:id="@+id/checkbox_acessibilidade9"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginRight="122dp"
+        app:layout_constraintEnd_toEndOf="@+id/container_tipos_de_acessibilidade"
+        app:layout_constraintTop_toTopOf="@+id/container_tipos_de_acessibilidade"
+        app:srcCompat="@drawable/icon_check2square" />
+
+    <TextView
+        android:id="@+id/tipos_acessibilidade_outro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="82dp"
+        android:layout_marginLeft="6dp"
+        android:fontFamily="@font/jura"
+        android:text="@string/tela_avaliacao_formulario_outro"
+        android:textColor="@color/primary_text"
+        android:textFontWeight="500"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_acessibilidade9"
+        app:layout_constraintTop_toTopOf="@+id/container_tipos_de_acessibilidade" />
+
+    <EditText
+        android:id="@+id/container_comentarios_formulario"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="7dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/background2"
+        android:gravity="top"
+        android:hint="@string/tela_avaliacao_formulario_hint_comentario"
+        android:inputType="textMultiLine"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_tipos_de_acessibilidade"
+        tools:ignore="SpeakableTextPresentCheck,TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/title_comentarios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jura"
+        android:text="@string/tela_avaliacao_formulario_comentario"
+        android:textColor="@color/primary"
+        android:textFontWeight="500"
+        app:layout_constraintEnd_toEndOf="@+id/container_comentarios_formulario"
+        app:layout_constraintStart_toStartOf="@+id/container_comentarios_formulario"
+        app:layout_constraintTop_toTopOf="@+id/container_comentarios_formulario" />
+
+    <Button
+        android:id="@+id/button_enviar_avaliacao"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="48dp"
+        android:backgroundTint="@color/primary"
+        android:textColor="@color/primary_text2"
+        android:fontFamily="@font/jura"
+        android:text="@string/tela_avaliacao_formulario_avaliacao"
+        android:textFontWeight="700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_comentarios_formulario" />
+
+    <include
+        layout="@layout/tela_footer"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".userInterface.telaMapaAutenticado.TelaMapaAutenticado">
+
+    <!-- Configurações do Mapbox -->
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:mapbox_cameraTargetLat="-23.52498"
+        app:mapbox_cameraTargetLng="-46.6218833"
+        app:mapbox_cameraZoom="15.5"
+        app:mapbox_styleUrl="mapbox://styles/mapbox/streets-v12?optimize=true"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="24dp"
+        android:background="#20808080"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewGraySquare"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="12dp"
+        android:background="#969696"
+        app:layout_constraintBottom_toBottomOf="@+id/topView"
+        app:layout_constraintEnd_toStartOf="@+id/textNaoAvaliado"
+        app:layout_constraintStart_toStartOf="@+id/topView"
+        app:layout_constraintTop_toTopOf="@+id/topView"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/textNaoAvaliado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:fontFamily="@font/jura"
+        android:text="@string/tela_mapa_nao_avaliado"
+        android:textColor="@color/primary_text"
+        android:textFontWeight="900"
+        app:layout_constraintBottom_toBottomOf="@+id/topView"
+        app:layout_constraintEnd_toStartOf="@+id/viewLineOne"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topView"
+        tools:ignore="RtlHardcoded,UnusedAttribute" />
+
+    <View
+        android:id="@+id/viewLineOne"
+        android:layout_width="3dp"
+        android:layout_height="51dp"
+        android:layout_marginRight="100dp"
+        android:background="#60808080"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topView"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/textBom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:fontFamily="@font/jura"
+        android:text="@string/tela_mapa_bom"
+        android:textColor="@color/primary_text"
+        android:textFontWeight="900"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/topView"
+        app:layout_constraintStart_toEndOf="@+id/viewLineOne"
+        app:layout_constraintTop_toTopOf="@+id/topView"
+        tools:ignore="RtlHardcoded,UnusedAttribute" />
+
+    <View
+        android:id="@+id/viewGreenSquare"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="#00FF00"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/topView"
+        app:layout_constraintStart_toEndOf="@+id/textBom"
+        app:layout_constraintTop_toTopOf="@+id/topView"
+        tools:ignore="RtlHardcoded" />
+
+    <View
+        android:id="@+id/viewYellowSquare"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="#E3C800"
+        android:layout_marginLeft="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/topView"
+        app:layout_constraintStart_toEndOf="@+id/viewGreenSquare"
+        app:layout_constraintTop_toTopOf="@+id/topView"
+        tools:ignore="RtlHardcoded" />
+
+    <View
+        android:id="@+id/viewRedSquare"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="#DF4759"
+        android:layout_marginLeft="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/topView"
+        app:layout_constraintStart_toEndOf="@+id/viewYellowSquare"
+        app:layout_constraintTop_toTopOf="@+id/topView"
+        tools:ignore="RtlHardcoded" />
+
+    <!-- Tirar Linha: android:layout_marginEnd para Centralizar Texto -->
+    <TextView
+        android:id="@+id/textRuim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tela_mapa_ruim"
+        android:fontFamily="@font/jura"
+        android:textColor="@color/primary_text"
+        android:textFontWeight="900"
+        android:layout_marginLeft="8dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/topView"
+        app:layout_constraintStart_toEndOf="@+id/viewRedSquare"
+        app:layout_constraintTop_toTopOf="@+id/topView"
+        tools:ignore="RtlHardcoded,UnusedAttribute" />
+
+    <View
+        android:id="@+id/viewLineTwo"
+        android:layout_width="3dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="240dp"
+        android:background="#60808080"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topView"
+        tools:ignore="RtlHardcoded" />
+
+    <ImageView
+        android:id="@+id/closeButton"
+        android:layout_width="36dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/topView"
+        app:layout_constraintEnd_toEndOf="@id/topView"
+        app:layout_constraintStart_toEndOf="@+id/viewLineTwo"
+        app:layout_constraintTop_toTopOf="@+id/topView"
+        app:srcCompat="@drawable/icon_x"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/btn_localizacao"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/backgroundView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/btn_localizar"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/backgroundView"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:background="@color/background"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintBounds" />
+
+    <include
+        layout="@layout/tela_footer"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
