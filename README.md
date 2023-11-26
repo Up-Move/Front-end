@@ -2,7 +2,6 @@
 7º Versão do Projeto
 
 ## Novas Features Adicionadas:
-
 - Ajustes nas Funcionalidades
 - Bug Fixes
 
