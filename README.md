@@ -4,6 +4,7 @@
 ## Novas Features Adicionadas:
 
 - Ajustes nas Funcionalidades
+- Bug Fixes
 
 ## Features Atuais:
 - Adicionada Todas as Telas do Projeto
